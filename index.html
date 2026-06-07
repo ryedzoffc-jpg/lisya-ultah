@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet">
     <!-- Font Awesome 6 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <!-- Lightbox2 untuk galeri -->
+    <!-- Lightbox2 -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
     <!-- Canvas Confetti -->
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1"></script>
@@ -46,7 +46,7 @@
         .btn-open:hover { background: #ffe3ea; transform: scale(1.02); }
         .music-float {
             position: fixed; bottom: 25px; right: 25px; z-index: 1100;
-            background: rgba(255, 245, 245, 0.85); backdrop-filter: blur(12px); border-radius: 60px;
+            background: rgba(255,245,245,0.85); backdrop-filter: blur(12px); border-radius: 60px;
             padding: 8px 16px; display: flex; align-items: center; gap: 12px;
             box-shadow: 0 8px 20px rgba(0,0,0,0.08); border: 1px solid rgba(255,255,240,0.7);
         }
@@ -163,7 +163,7 @@
             <div class="glass-card premium-card event-card">
                 <div class="event-detail"><i class="fas fa-calendar-alt"></i> 📅 Hari: Senin</div>
                 <div class="event-detail"><i class="fas fa-calendar-check"></i> 📆 Tanggal: 22 Juni 2026</div>
-                <div class="event-detail"><i class="fas fa-clock"></i> 🕕 Waktu: 06.00 WITA - Selesai</div>
+                <div class="event-detail"><i class="fas fa-clock"></i> 🕕 Waktu: 18.00 WITA - Selesai</div>
                 <div class="event-detail"><i class="fas fa-map-marker-alt"></i> 📍 Lokasi: Ujung Hyang, Karangasem, Bali</div>
                 <button id="lihatLokasiBtn" class="btn-secondary">Buka Google Maps <i class="fas fa-external-link-alt"></i></button>
                 <div class="map-container">
@@ -239,7 +239,7 @@
         canvasConfetti({ particleCount: 40, spread: 100, origin: { y: 0.3, x: 0.2 }, startVelocity: 15 });
     }
 
-    // ======================== MUSIK (LAGU BARU) ========================
+    // ======================== MUSIK ========================
     const audio = new Audio('https://www.image2url.com/r2/default/audio/1780730428740-c03f2412-58d8-486f-8748-1ab6282f7f98.mp3');
     audio.loop = true;
     audio.volume = 0.5;
@@ -302,9 +302,9 @@
         }
     }
     
-    // ======================== COUNTDOWN (22 Juni 2026 06:00 WITA) ========================
+    // ======================== COUNTDOWN (22 Juni 2026 18:00 WITA) ========================
     function updateCountdown() {
-        const target = new Date(2026, 5, 22, 6, 0, 0);
+        const target = new Date(2026, 5, 22, 18, 0, 0); // Jam 18.00 WITA
         const now = new Date();
         const diff = target - now;
         if(diff <= 0) {
@@ -423,4 +423,4 @@
     }
 </script>
 </body>
-  </html>
+    </html>
